@@ -1,0 +1,2 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+com.jtbdevelopment.spring.hz.autoconfig.HazelcastClientAutoConfiguration
