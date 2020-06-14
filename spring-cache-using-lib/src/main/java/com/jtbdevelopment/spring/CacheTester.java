@@ -23,6 +23,7 @@ public class CacheTester {
             logger.error("Wrong type");
             logger.error("Wrong type");
             logger.error("Wrong type");
+            throw new IllegalStateException("Wrong cache manager");
         }
         logger.info("**********************************");
         logger.info("**********************************");
