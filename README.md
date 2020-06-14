@@ -9,3 +9,5 @@ In addition - download hazelcast 3.12 and run a standalone server locally.
 When I run the bean config version of app - it starts up.
 When I run the auto config version of app - it exceptions because the cache manager has already decided to be in memory
 If I remove the throw exception - you can see it create my hazelcast client config AFTER initing the cache check 
+
+See two log files in this directory.
