@@ -5,6 +5,8 @@ import com.hazelcast.config.GroupConfig;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.autoconfigure.AutoConfigureBefore;
+import org.springframework.boot.autoconfigure.ImportAutoConfiguration;
+import org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.boot.autoconfigure.hazelcast.HazelcastAutoConfiguration;
 import org.springframework.context.annotation.Bean;
@@ -16,8 +18,8 @@ import org.springframework.context.annotation.Import;
  * Time: 10:49 PM
  */
 @Configuration
-@Import(HazelcastAutoConfiguration.class)
-@AutoConfigureBefore(HazelcastAutoConfiguration.class)
+@ImportAutoConfiguration(HazelcastAutoConfiguration.class)
+@AutoConfigureBefore({HazelcastAutoConfiguration.class, CacheAutoConfiguration.class})
 public class HazelcastClientAutoConfiguration {
     private static final Logger logger = LoggerFactory.getLogger(HazelcastClientAutoConfiguration.class);
 
